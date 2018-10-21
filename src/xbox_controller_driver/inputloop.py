@@ -1,5 +1,9 @@
+#!/user/bin/env python
 import xboxmod
 import math
+import rospy
+from std_msgs.msg import String
+import sys
 
 
 #Try 2752 as ratio with 8000 as deadzone
@@ -43,7 +47,34 @@ def power_level(x, y, levels, deadzone = 8000):
 
 
 
+
+#attempts to work Sean's code into a ros publisher
 controller = xboxmod.Joystick();
+if __name__=="__main__":
+    pub=rospy.Publisher('controller', String,queue_size=10)
+    rospy.init_node('talker', anonymous=True)
+    rate=rospy.Rate(10)
+    try:
+
+        while not rospy.is_shutdown():
+            while True:
+                controller.refresh();
+                if(controller.Back()):
+                    controller.close()
+                    sys.exit()
+                x=controller.leftX()
+                y=controller.rightX()
+                powerLevel=power_level(x,y,8)
+                tankTuple=tuple(powerLevel*x for x in angle_to_tank(to_ange(x,y)))
+                tank_msg=str(tankTuple)
+                rospy.loginfo(tank_msg)
+                pub.publish(tank_msg)
+                rate.sleep()
+    except rospy.ROSInterruptException:
+        print('InterruptException')
+            
+
+
 
 while True:
     controller.refresh();
