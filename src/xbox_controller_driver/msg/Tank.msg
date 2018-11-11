@@ -1,4 +1,5 @@
+
 Header header
 
-float32 battery
-float32 angle
+float32 powerLevel
+float32[] angle

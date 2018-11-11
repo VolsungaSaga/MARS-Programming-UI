@@ -3,7 +3,7 @@
 
 #to run this program, you'll want to add "Defaults env_keep+="PYTHONPATH" to your sudoers file
 
-#you'll also need to run this program as root either by switching to root with "su root" or by using the command "sudo python inputloopy.py"
+#you'll also need to run this program as root either by switching to root with "su root." Just using "sudo python inputloopy.py" does not work
 
 #most of the time, you'll have to unplug and replug the controller back into the virtual machine between instances of this program.
 
@@ -77,7 +77,7 @@ if __name__=="__main__":
                 powerLevel=power_level(x,y,8)
 #                tankTuple=tuple(powerLevel*x for x in angle_to_tank(to_angle(x,y)))
                 tank_msg=Tank()
-                tank_msg.battery=powerLevel
+                tank_msg.powerLevel=powerLevel
                 tank_msg.angle=angle_to_tank(to_angle(x,y))
                 
                 rospy.loginfo(tank_msg)
