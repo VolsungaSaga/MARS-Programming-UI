@@ -1,0 +1,2 @@
+xbox_controller_driver
+-DCATKIN_DEVEL_PREFIX=/home/david/git clones/MARS-Programming-UI/devel -DCMAKE_INSTALL_PREFIX=/home/david/git clones/MARS-Programming-UI/install -G Unix Makefiles

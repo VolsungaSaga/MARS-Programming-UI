@@ -1,0 +1,16 @@
+{
+  "configurations": [
+    {
+      "browse": {
+        "databaseFilename": "",
+        "limitSymbolsToIncludedHeaders": true
+      },
+      "includePath": [
+        "/home/david/git clones/MARS-Programming-UI/devel/include",
+        "/opt/ros/kinetic/include",
+        "/usr/include"
+      ],
+      "name": "Linux"
+    }
+  ]
+}

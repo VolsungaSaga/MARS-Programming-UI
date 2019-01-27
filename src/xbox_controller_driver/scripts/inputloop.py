@@ -1,6 +1,4 @@
-#!/user/bin/env python
-
-
+#!/usr/bin/env python
 #to run this program, you'll want to add "Defaults env_keep+="PYTHONPATH" to your sudoers file
 
 #you'll also need to run this program as root either by switching to root with "su root." Just using "sudo python inputloopy.py" does not work
@@ -11,7 +9,7 @@
 import rospy
 import xboxmod
 import math
-from xbox_controller_driver.msg import Tank 
+from xbox_controller_driver.msg import ControllerState
 from std_msgs.msg import String
 import sys
 
@@ -60,9 +58,9 @@ def power_level(x, y, levels, deadzone = 8000):
 #attempts to work Sean's code into a ros publisher
 controller = xboxmod.Joystick();
 if __name__=="__main__":
-    pub=rospy.Publisher('controller', Tank,queue_size=10)
+    pub=rospy.Publisher('controller', ControllerState,queue_size=10)
     rospy.init_node('talker', anonymous=True)
-    rate=rospy.Rate(10)
+    rate=rospy.Rate(15)
     try:
 
         while not rospy.is_shutdown():
@@ -71,17 +69,31 @@ if __name__=="__main__":
                 controller.refresh();
                 if(controller.Back()):
                     controller.close()
+                    print("Exiting loop")
                     sys.exit()
-                x=controller.leftX()
-                y=controller.rightX()
-                powerLevel=power_level(x,y,8)
-#                tankTuple=tuple(powerLevel*x for x in angle_to_tank(to_angle(x,y)))
-                tank_msg=Tank()
-                tank_msg.powerLevel=powerLevel
-                tank_msg.angle=angle_to_tank(to_angle(x,y))
+                #x=controller.leftX()
+                #y=controller.rightX()
+                #powerLevel=power_level(x,y,8)
+                #tankTuple=tuple(powerLevel*x for x in angle_to_tank(to_angle(x,y)))
+                #tank_msg=Tank()
+                #tank_msg.powerLevel=powerLevel
+                #tank_msg.angle=angle_to_tank(to_angle(x,y))
                 
-                rospy.loginfo(tank_msg)
-                pub.publish(tank_msg)
+                #rospy.loginfo(tank_msg)
+                #pub.publish(tank_msg)
+
+                controllerState=ControllerState()
+                controllerState.leftY=controller.leftY()
+                controllerState.rightY=controller.rightY()
+                controllerState.A=controller.A()
+                controllerState.B=controller.B()
+                controllerState.X=controller.X()
+                controllerState.Y=controller.Y()
+                controllerState.leftTrigger=controller.leftTrigger()
+                controllerState.rightTrigger=controller.rightTrigger()
+                #controller.refresh()
+                rospy.loginfo(controllerState)
+                pub.publish(ControllerState)
                 rate.sleep()
     except rospy.ROSInterruptException:
         print('InterruptException')

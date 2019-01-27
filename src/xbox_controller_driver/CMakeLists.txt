@@ -52,15 +52,16 @@ find_package(catkin REQUIRED COMPONENTS
 add_message_files(
   FILES
   Tank.msg
+  ControllerState.msg
 
  )
 
 ## Generate services in the 'srv' folder
- add_service_files(
-   FILES
-   HandleTank.srv
+ ##add_service_files(
+ ##  FILES
+  ## HandleTank.srv
    
-   )
+  ## )
 
 ## Generate actions in the 'action' folder
 # add_action_files(
@@ -74,6 +75,7 @@ generate_messages(
    DEPENDENCIES
    geometry_msgs#   std_msgs
    std_msgs
+   
 )
 
 ################################################
