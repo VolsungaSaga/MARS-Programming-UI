@@ -2,7 +2,7 @@
 The repository for the UI team. This will consist of the code for the Xbox controller, the code for sending the data to the Jetson, and any other code running on the remote system. 
 ## How to run:
 1. You'll need to have a number variables added to your account's .bashrc file and root .bashrc
-    - ROS_MASTER_URI=http://172.27.38.14 (dynamically made, so could change)
+    - ROS_MASTER_URI=the ip of the jetson (dynamically made, so could change)
     - ROS_IP=your computer's ip (found using "hostname -I")
     - Defaults env_keep+="PYTHONPATH" (add this to your sudoers file)
 2. Install the following driver for the gamepad by running the command:
