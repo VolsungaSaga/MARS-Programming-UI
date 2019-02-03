@@ -93,7 +93,7 @@ if __name__=="__main__":
                 controllerState.rightTrigger=controller.rightTrigger()
                 #controller.refresh()
                 rospy.loginfo(controllerState)
-                pub.publish(ControllerState)
+                pub.publish(controllerState)
                 rate.sleep()
     except rospy.ROSInterruptException:
         print('InterruptException')
