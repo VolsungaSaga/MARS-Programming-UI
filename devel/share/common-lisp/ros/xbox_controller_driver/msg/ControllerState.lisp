@@ -57,6 +57,16 @@
     :initarg :guide
     :type cl:fixnum
     :initform 0)
+   (leftBumper
+    :reader leftBumper
+    :initarg :leftBumper
+    :type cl:fixnum
+    :initform 0)
+   (rightBumper
+    :reader rightBumper
+    :initarg :rightBumper
+    :type cl:fixnum
+    :initform 0)
    (leftTrigger
     :reader leftTrigger
     :initarg :leftTrigger
@@ -65,6 +75,16 @@
    (rightTrigger
     :reader rightTrigger
     :initarg :rightTrigger
+    :type cl:float
+    :initform 0.0)
+   (normalizeRightY
+    :reader normalizeRightY
+    :initarg :normalizeRightY
+    :type cl:float
+    :initform 0.0)
+   (normalizeLeftY
+    :reader normalizeLeftY
+    :initarg :normalizeLeftY
     :type cl:float
     :initform 0.0))
 )
@@ -127,6 +147,16 @@
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader xbox_controller_driver-msg:guide-val is deprecated.  Use xbox_controller_driver-msg:guide instead.")
   (guide m))
 
+(cl:ensure-generic-function 'leftBumper-val :lambda-list '(m))
+(cl:defmethod leftBumper-val ((m <ControllerState>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader xbox_controller_driver-msg:leftBumper-val is deprecated.  Use xbox_controller_driver-msg:leftBumper instead.")
+  (leftBumper m))
+
+(cl:ensure-generic-function 'rightBumper-val :lambda-list '(m))
+(cl:defmethod rightBumper-val ((m <ControllerState>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader xbox_controller_driver-msg:rightBumper-val is deprecated.  Use xbox_controller_driver-msg:rightBumper instead.")
+  (rightBumper m))
+
 (cl:ensure-generic-function 'leftTrigger-val :lambda-list '(m))
 (cl:defmethod leftTrigger-val ((m <ControllerState>))
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader xbox_controller_driver-msg:leftTrigger-val is deprecated.  Use xbox_controller_driver-msg:leftTrigger instead.")
@@ -136,6 +166,16 @@
 (cl:defmethod rightTrigger-val ((m <ControllerState>))
   (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader xbox_controller_driver-msg:rightTrigger-val is deprecated.  Use xbox_controller_driver-msg:rightTrigger instead.")
   (rightTrigger m))
+
+(cl:ensure-generic-function 'normalizeRightY-val :lambda-list '(m))
+(cl:defmethod normalizeRightY-val ((m <ControllerState>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader xbox_controller_driver-msg:normalizeRightY-val is deprecated.  Use xbox_controller_driver-msg:normalizeRightY instead.")
+  (normalizeRightY m))
+
+(cl:ensure-generic-function 'normalizeLeftY-val :lambda-list '(m))
+(cl:defmethod normalizeLeftY-val ((m <ControllerState>))
+  (roslisp-msg-protocol:msg-deprecation-warning "Using old-style slot reader xbox_controller_driver-msg:normalizeLeftY-val is deprecated.  Use xbox_controller_driver-msg:normalizeLeftY instead.")
+  (normalizeLeftY m))
 (cl:defmethod roslisp-msg-protocol:serialize ((msg <ControllerState>) ostream)
   "Serializes a message object of type '<ControllerState>"
   (roslisp-msg-protocol:serialize (cl:slot-value msg 'Header) ostream)
@@ -175,12 +215,30 @@
     (cl:write-byte (cl:ldb (cl:byte 8 0) unsigned) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 8) unsigned) ostream)
     )
+  (cl:let* ((signed (cl:slot-value msg 'leftBumper)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 65536) signed)))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) unsigned) ostream)
+    )
+  (cl:let* ((signed (cl:slot-value msg 'rightBumper)) (unsigned (cl:if (cl:< signed 0) (cl:+ signed 65536) signed)))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) unsigned) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) unsigned) ostream)
+    )
   (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'leftTrigger))))
     (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream))
   (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'rightTrigger))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream))
+  (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'normalizeRightY))))
+    (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
+    (cl:write-byte (cl:ldb (cl:byte 8 24) bits) ostream))
+  (cl:let ((bits (roslisp-utils:encode-single-float-bits (cl:slot-value msg 'normalizeLeftY))))
     (cl:write-byte (cl:ldb (cl:byte 8 0) bits) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 8) bits) ostream)
     (cl:write-byte (cl:ldb (cl:byte 8 16) bits) ostream)
@@ -225,6 +283,14 @@
       (cl:setf (cl:ldb (cl:byte 8 0) unsigned) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 8) unsigned) (cl:read-byte istream))
       (cl:setf (cl:slot-value msg 'guide) (cl:if (cl:< unsigned 32768) unsigned (cl:- unsigned 65536))))
+    (cl:let ((unsigned 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:slot-value msg 'leftBumper) (cl:if (cl:< unsigned 32768) unsigned (cl:- unsigned 65536))))
+    (cl:let ((unsigned 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) unsigned) (cl:read-byte istream))
+      (cl:setf (cl:slot-value msg 'rightBumper) (cl:if (cl:< unsigned 32768) unsigned (cl:- unsigned 65536))))
     (cl:let ((bits 0))
       (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
@@ -237,6 +303,18 @@
       (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
       (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
     (cl:setf (cl:slot-value msg 'rightTrigger) (roslisp-utils:decode-single-float-bits bits)))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'normalizeRightY) (roslisp-utils:decode-single-float-bits bits)))
+    (cl:let ((bits 0))
+      (cl:setf (cl:ldb (cl:byte 8 0) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 8) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 16) bits) (cl:read-byte istream))
+      (cl:setf (cl:ldb (cl:byte 8 24) bits) (cl:read-byte istream))
+    (cl:setf (cl:slot-value msg 'normalizeLeftY) (roslisp-utils:decode-single-float-bits bits)))
   msg
 )
 (cl:defmethod roslisp-msg-protocol:ros-datatype ((msg (cl:eql '<ControllerState>)))
@@ -247,16 +325,16 @@
   "xbox_controller_driver/ControllerState")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql '<ControllerState>)))
   "Returns md5sum for a message object of type '<ControllerState>"
-  "241623f4c570eac23d9ad3ea0b37b80a")
+  "4c31c26381776898087933af6bf1ba7e")
 (cl:defmethod roslisp-msg-protocol:md5sum ((type (cl:eql 'ControllerState)))
   "Returns md5sum for a message object of type 'ControllerState"
-  "241623f4c570eac23d9ad3ea0b37b80a")
+  "4c31c26381776898087933af6bf1ba7e")
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql '<ControllerState>)))
   "Returns full string definition for message of type '<ControllerState>"
-  (cl:format cl:nil "Header Header~%~%int16 leftY~%int16 rightY~%~%int16 A~%int16 B~%int16 X~%int16 Y ~%int16 back~%int16 start~%int16 guide~%~%float32 leftTrigger~%float32 rightTrigger~%~%~%================================================================================~%MSG: std_msgs/Header~%# Standard metadata for higher-level stamped data types.~%# This is generally used to communicate timestamped data ~%# in a particular coordinate frame.~%# ~%# sequence ID: consecutively increasing ID ~%uint32 seq~%#Two-integer timestamp that is expressed as:~%# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')~%# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')~%# time-handling sugar is provided by the client library~%time stamp~%#Frame this data is associated with~%# 0: no frame~%# 1: global frame~%string frame_id~%~%~%"))
+  (cl:format cl:nil "Header Header~%~%int16 leftY~%int16 rightY~%~%int16 A~%int16 B~%int16 X~%int16 Y ~%int16 back~%int16 start~%int16 guide~%int16 leftBumper~%int16 rightBumper~%~%~%float32 leftTrigger~%float32 rightTrigger~%~%float32 normalizeRightY~%float32 normalizeLeftY~%~%================================================================================~%MSG: std_msgs/Header~%# Standard metadata for higher-level stamped data types.~%# This is generally used to communicate timestamped data ~%# in a particular coordinate frame.~%# ~%# sequence ID: consecutively increasing ID ~%uint32 seq~%#Two-integer timestamp that is expressed as:~%# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')~%# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')~%# time-handling sugar is provided by the client library~%time stamp~%#Frame this data is associated with~%# 0: no frame~%# 1: global frame~%string frame_id~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:message-definition ((type (cl:eql 'ControllerState)))
   "Returns full string definition for message of type 'ControllerState"
-  (cl:format cl:nil "Header Header~%~%int16 leftY~%int16 rightY~%~%int16 A~%int16 B~%int16 X~%int16 Y ~%int16 back~%int16 start~%int16 guide~%~%float32 leftTrigger~%float32 rightTrigger~%~%~%================================================================================~%MSG: std_msgs/Header~%# Standard metadata for higher-level stamped data types.~%# This is generally used to communicate timestamped data ~%# in a particular coordinate frame.~%# ~%# sequence ID: consecutively increasing ID ~%uint32 seq~%#Two-integer timestamp that is expressed as:~%# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')~%# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')~%# time-handling sugar is provided by the client library~%time stamp~%#Frame this data is associated with~%# 0: no frame~%# 1: global frame~%string frame_id~%~%~%"))
+  (cl:format cl:nil "Header Header~%~%int16 leftY~%int16 rightY~%~%int16 A~%int16 B~%int16 X~%int16 Y ~%int16 back~%int16 start~%int16 guide~%int16 leftBumper~%int16 rightBumper~%~%~%float32 leftTrigger~%float32 rightTrigger~%~%float32 normalizeRightY~%float32 normalizeLeftY~%~%================================================================================~%MSG: std_msgs/Header~%# Standard metadata for higher-level stamped data types.~%# This is generally used to communicate timestamped data ~%# in a particular coordinate frame.~%# ~%# sequence ID: consecutively increasing ID ~%uint32 seq~%#Two-integer timestamp that is expressed as:~%# * stamp.sec: seconds (stamp_secs) since epoch (in Python the variable is called 'secs')~%# * stamp.nsec: nanoseconds since stamp_secs (in Python the variable is called 'nsecs')~%# time-handling sugar is provided by the client library~%time stamp~%#Frame this data is associated with~%# 0: no frame~%# 1: global frame~%string frame_id~%~%~%"))
 (cl:defmethod roslisp-msg-protocol:serialization-length ((msg <ControllerState>))
   (cl:+ 0
      (roslisp-msg-protocol:serialization-length (cl:slot-value msg 'Header))
@@ -269,6 +347,10 @@
      2
      2
      2
+     2
+     2
+     4
+     4
      4
      4
 ))
@@ -285,6 +367,10 @@
     (cl:cons ':back (back msg))
     (cl:cons ':start (start msg))
     (cl:cons ':guide (guide msg))
+    (cl:cons ':leftBumper (leftBumper msg))
+    (cl:cons ':rightBumper (rightBumper msg))
     (cl:cons ':leftTrigger (leftTrigger msg))
     (cl:cons ':rightTrigger (rightTrigger msg))
+    (cl:cons ':normalizeRightY (normalizeRightY msg))
+    (cl:cons ':normalizeLeftY (normalizeLeftY msg))
 ))

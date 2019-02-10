@@ -29,8 +29,12 @@ class ControllerState {
       this.back = null;
       this.start = null;
       this.guide = null;
+      this.leftBumper = null;
+      this.rightBumper = null;
       this.leftTrigger = null;
       this.rightTrigger = null;
+      this.normalizeRightY = null;
+      this.normalizeLeftY = null;
     }
     else {
       if (initObj.hasOwnProperty('Header')) {
@@ -93,6 +97,18 @@ class ControllerState {
       else {
         this.guide = 0;
       }
+      if (initObj.hasOwnProperty('leftBumper')) {
+        this.leftBumper = initObj.leftBumper
+      }
+      else {
+        this.leftBumper = 0;
+      }
+      if (initObj.hasOwnProperty('rightBumper')) {
+        this.rightBumper = initObj.rightBumper
+      }
+      else {
+        this.rightBumper = 0;
+      }
       if (initObj.hasOwnProperty('leftTrigger')) {
         this.leftTrigger = initObj.leftTrigger
       }
@@ -104,6 +120,18 @@ class ControllerState {
       }
       else {
         this.rightTrigger = 0.0;
+      }
+      if (initObj.hasOwnProperty('normalizeRightY')) {
+        this.normalizeRightY = initObj.normalizeRightY
+      }
+      else {
+        this.normalizeRightY = 0.0;
+      }
+      if (initObj.hasOwnProperty('normalizeLeftY')) {
+        this.normalizeLeftY = initObj.normalizeLeftY
+      }
+      else {
+        this.normalizeLeftY = 0.0;
       }
     }
   }
@@ -130,10 +158,18 @@ class ControllerState {
     bufferOffset = _serializer.int16(obj.start, buffer, bufferOffset);
     // Serialize message field [guide]
     bufferOffset = _serializer.int16(obj.guide, buffer, bufferOffset);
+    // Serialize message field [leftBumper]
+    bufferOffset = _serializer.int16(obj.leftBumper, buffer, bufferOffset);
+    // Serialize message field [rightBumper]
+    bufferOffset = _serializer.int16(obj.rightBumper, buffer, bufferOffset);
     // Serialize message field [leftTrigger]
     bufferOffset = _serializer.float32(obj.leftTrigger, buffer, bufferOffset);
     // Serialize message field [rightTrigger]
     bufferOffset = _serializer.float32(obj.rightTrigger, buffer, bufferOffset);
+    // Serialize message field [normalizeRightY]
+    bufferOffset = _serializer.float32(obj.normalizeRightY, buffer, bufferOffset);
+    // Serialize message field [normalizeLeftY]
+    bufferOffset = _serializer.float32(obj.normalizeLeftY, buffer, bufferOffset);
     return bufferOffset;
   }
 
@@ -161,17 +197,25 @@ class ControllerState {
     data.start = _deserializer.int16(buffer, bufferOffset);
     // Deserialize message field [guide]
     data.guide = _deserializer.int16(buffer, bufferOffset);
+    // Deserialize message field [leftBumper]
+    data.leftBumper = _deserializer.int16(buffer, bufferOffset);
+    // Deserialize message field [rightBumper]
+    data.rightBumper = _deserializer.int16(buffer, bufferOffset);
     // Deserialize message field [leftTrigger]
     data.leftTrigger = _deserializer.float32(buffer, bufferOffset);
     // Deserialize message field [rightTrigger]
     data.rightTrigger = _deserializer.float32(buffer, bufferOffset);
+    // Deserialize message field [normalizeRightY]
+    data.normalizeRightY = _deserializer.float32(buffer, bufferOffset);
+    // Deserialize message field [normalizeLeftY]
+    data.normalizeLeftY = _deserializer.float32(buffer, bufferOffset);
     return data;
   }
 
   static getMessageSize(object) {
     let length = 0;
     length += std_msgs.msg.Header.getMessageSize(object.Header);
-    return length + 26;
+    return length + 38;
   }
 
   static datatype() {
@@ -181,7 +225,7 @@ class ControllerState {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '241623f4c570eac23d9ad3ea0b37b80a';
+    return '4c31c26381776898087933af6bf1ba7e';
   }
 
   static messageDefinition() {
@@ -199,10 +243,15 @@ class ControllerState {
     int16 back
     int16 start
     int16 guide
+    int16 leftBumper
+    int16 rightBumper
+    
     
     float32 leftTrigger
     float32 rightTrigger
     
+    float32 normalizeRightY
+    float32 normalizeLeftY
     
     ================================================================================
     MSG: std_msgs/Header
@@ -301,6 +350,20 @@ class ControllerState {
       resolved.guide = 0
     }
 
+    if (msg.leftBumper !== undefined) {
+      resolved.leftBumper = msg.leftBumper;
+    }
+    else {
+      resolved.leftBumper = 0
+    }
+
+    if (msg.rightBumper !== undefined) {
+      resolved.rightBumper = msg.rightBumper;
+    }
+    else {
+      resolved.rightBumper = 0
+    }
+
     if (msg.leftTrigger !== undefined) {
       resolved.leftTrigger = msg.leftTrigger;
     }
@@ -313,6 +376,20 @@ class ControllerState {
     }
     else {
       resolved.rightTrigger = 0.0
+    }
+
+    if (msg.normalizeRightY !== undefined) {
+      resolved.normalizeRightY = msg.normalizeRightY;
+    }
+    else {
+      resolved.normalizeRightY = 0.0
+    }
+
+    if (msg.normalizeLeftY !== undefined) {
+      resolved.normalizeLeftY = msg.normalizeLeftY;
+    }
+    else {
+      resolved.normalizeLeftY = 0.0
     }
 
     return resolved;

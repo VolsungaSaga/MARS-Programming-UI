@@ -8,7 +8,7 @@ import struct
 import std_msgs.msg
 
 class ControllerState(genpy.Message):
-  _md5sum = "241623f4c570eac23d9ad3ea0b37b80a"
+  _md5sum = "4c31c26381776898087933af6bf1ba7e"
   _type = "xbox_controller_driver/ControllerState"
   _has_header = False #flag to mark the presence of a Header object
   _full_text = """Header Header
@@ -23,10 +23,15 @@ int16 Y
 int16 back
 int16 start
 int16 guide
+int16 leftBumper
+int16 rightBumper
+
 
 float32 leftTrigger
 float32 rightTrigger
 
+float32 normalizeRightY
+float32 normalizeLeftY
 
 ================================================================================
 MSG: std_msgs/Header
@@ -46,8 +51,8 @@ time stamp
 # 1: global frame
 string frame_id
 """
-  __slots__ = ['Header','leftY','rightY','A','B','X','Y','back','start','guide','leftTrigger','rightTrigger']
-  _slot_types = ['std_msgs/Header','int16','int16','int16','int16','int16','int16','int16','int16','int16','float32','float32']
+  __slots__ = ['Header','leftY','rightY','A','B','X','Y','back','start','guide','leftBumper','rightBumper','leftTrigger','rightTrigger','normalizeRightY','normalizeLeftY']
+  _slot_types = ['std_msgs/Header','int16','int16','int16','int16','int16','int16','int16','int16','int16','int16','int16','float32','float32','float32','float32']
 
   def __init__(self, *args, **kwds):
     """
@@ -57,7 +62,7 @@ string frame_id
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       Header,leftY,rightY,A,B,X,Y,back,start,guide,leftTrigger,rightTrigger
+       Header,leftY,rightY,A,B,X,Y,back,start,guide,leftBumper,rightBumper,leftTrigger,rightTrigger,normalizeRightY,normalizeLeftY
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -86,10 +91,18 @@ string frame_id
         self.start = 0
       if self.guide is None:
         self.guide = 0
+      if self.leftBumper is None:
+        self.leftBumper = 0
+      if self.rightBumper is None:
+        self.rightBumper = 0
       if self.leftTrigger is None:
         self.leftTrigger = 0.
       if self.rightTrigger is None:
         self.rightTrigger = 0.
+      if self.normalizeRightY is None:
+        self.normalizeRightY = 0.
+      if self.normalizeLeftY is None:
+        self.normalizeLeftY = 0.
     else:
       self.Header = std_msgs.msg.Header()
       self.leftY = 0
@@ -101,8 +114,12 @@ string frame_id
       self.back = 0
       self.start = 0
       self.guide = 0
+      self.leftBumper = 0
+      self.rightBumper = 0
       self.leftTrigger = 0.
       self.rightTrigger = 0.
+      self.normalizeRightY = 0.
+      self.normalizeLeftY = 0.
 
   def _get_types(self):
     """
@@ -125,7 +142,7 @@ string frame_id
         length = len(_x)
       buff.write(struct.pack('<I%ss'%length, length, _x))
       _x = self
-      buff.write(_get_struct_9h2f().pack(_x.leftY, _x.rightY, _x.A, _x.B, _x.X, _x.Y, _x.back, _x.start, _x.guide, _x.leftTrigger, _x.rightTrigger))
+      buff.write(_get_struct_11h4f().pack(_x.leftY, _x.rightY, _x.A, _x.B, _x.X, _x.Y, _x.back, _x.start, _x.guide, _x.leftBumper, _x.rightBumper, _x.leftTrigger, _x.rightTrigger, _x.normalizeRightY, _x.normalizeLeftY))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -153,8 +170,8 @@ string frame_id
         self.Header.frame_id = str[start:end]
       _x = self
       start = end
-      end += 26
-      (_x.leftY, _x.rightY, _x.A, _x.B, _x.X, _x.Y, _x.back, _x.start, _x.guide, _x.leftTrigger, _x.rightTrigger,) = _get_struct_9h2f().unpack(str[start:end])
+      end += 38
+      (_x.leftY, _x.rightY, _x.A, _x.B, _x.X, _x.Y, _x.back, _x.start, _x.guide, _x.leftBumper, _x.rightBumper, _x.leftTrigger, _x.rightTrigger, _x.normalizeRightY, _x.normalizeLeftY,) = _get_struct_11h4f().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -176,7 +193,7 @@ string frame_id
         length = len(_x)
       buff.write(struct.pack('<I%ss'%length, length, _x))
       _x = self
-      buff.write(_get_struct_9h2f().pack(_x.leftY, _x.rightY, _x.A, _x.B, _x.X, _x.Y, _x.back, _x.start, _x.guide, _x.leftTrigger, _x.rightTrigger))
+      buff.write(_get_struct_11h4f().pack(_x.leftY, _x.rightY, _x.A, _x.B, _x.X, _x.Y, _x.back, _x.start, _x.guide, _x.leftBumper, _x.rightBumper, _x.leftTrigger, _x.rightTrigger, _x.normalizeRightY, _x.normalizeLeftY))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -205,8 +222,8 @@ string frame_id
         self.Header.frame_id = str[start:end]
       _x = self
       start = end
-      end += 26
-      (_x.leftY, _x.rightY, _x.A, _x.B, _x.X, _x.Y, _x.back, _x.start, _x.guide, _x.leftTrigger, _x.rightTrigger,) = _get_struct_9h2f().unpack(str[start:end])
+      end += 38
+      (_x.leftY, _x.rightY, _x.A, _x.B, _x.X, _x.Y, _x.back, _x.start, _x.guide, _x.leftBumper, _x.rightBumper, _x.leftTrigger, _x.rightTrigger, _x.normalizeRightY, _x.normalizeLeftY,) = _get_struct_11h4f().unpack(str[start:end])
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -215,15 +232,15 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
+_struct_11h4f = None
+def _get_struct_11h4f():
+    global _struct_11h4f
+    if _struct_11h4f is None:
+        _struct_11h4f = struct.Struct("<11h4f")
+    return _struct_11h4f
 _struct_3I = None
 def _get_struct_3I():
     global _struct_3I
     if _struct_3I is None:
         _struct_3I = struct.Struct("<3I")
     return _struct_3I
-_struct_9h2f = None
-def _get_struct_9h2f():
-    global _struct_9h2f
-    if _struct_9h2f is None:
-        _struct_9h2f = struct.Struct("<9h2f")
-    return _struct_9h2f

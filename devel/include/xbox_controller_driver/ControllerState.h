@@ -35,8 +35,12 @@ struct ControllerState_
     , back(0)
     , start(0)
     , guide(0)
+    , leftBumper(0)
+    , rightBumper(0)
     , leftTrigger(0.0)
-    , rightTrigger(0.0)  {
+    , rightTrigger(0.0)
+    , normalizeRightY(0.0)
+    , normalizeLeftY(0.0)  {
     }
   ControllerState_(const ContainerAllocator& _alloc)
     : Header(_alloc)
@@ -49,8 +53,12 @@ struct ControllerState_
     , back(0)
     , start(0)
     , guide(0)
+    , leftBumper(0)
+    , rightBumper(0)
     , leftTrigger(0.0)
-    , rightTrigger(0.0)  {
+    , rightTrigger(0.0)
+    , normalizeRightY(0.0)
+    , normalizeLeftY(0.0)  {
   (void)_alloc;
     }
 
@@ -86,11 +94,23 @@ struct ControllerState_
    typedef int16_t _guide_type;
   _guide_type guide;
 
+   typedef int16_t _leftBumper_type;
+  _leftBumper_type leftBumper;
+
+   typedef int16_t _rightBumper_type;
+  _rightBumper_type rightBumper;
+
    typedef float _leftTrigger_type;
   _leftTrigger_type leftTrigger;
 
    typedef float _rightTrigger_type;
   _rightTrigger_type rightTrigger;
+
+   typedef float _normalizeRightY_type;
+  _normalizeRightY_type normalizeRightY;
+
+   typedef float _normalizeLeftY_type;
+  _normalizeLeftY_type normalizeLeftY;
 
 
 
@@ -170,12 +190,12 @@ struct MD5Sum< ::xbox_controller_driver::ControllerState_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "241623f4c570eac23d9ad3ea0b37b80a";
+    return "4c31c26381776898087933af6bf1ba7e";
   }
 
   static const char* value(const ::xbox_controller_driver::ControllerState_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x241623f4c570eac2ULL;
-  static const uint64_t static_value2 = 0x3d9ad3ea0b37b80aULL;
+  static const uint64_t static_value1 = 0x4c31c26381776898ULL;
+  static const uint64_t static_value2 = 0x087933af6bf1ba7eULL;
 };
 
 template<class ContainerAllocator>
@@ -206,10 +226,15 @@ int16 Y \n\
 int16 back\n\
 int16 start\n\
 int16 guide\n\
+int16 leftBumper\n\
+int16 rightBumper\n\
+\n\
 \n\
 float32 leftTrigger\n\
 float32 rightTrigger\n\
 \n\
+float32 normalizeRightY\n\
+float32 normalizeLeftY\n\
 \n\
 ================================================================================\n\
 MSG: std_msgs/Header\n\
@@ -256,8 +281,12 @@ namespace serialization
       stream.next(m.back);
       stream.next(m.start);
       stream.next(m.guide);
+      stream.next(m.leftBumper);
+      stream.next(m.rightBumper);
       stream.next(m.leftTrigger);
       stream.next(m.rightTrigger);
+      stream.next(m.normalizeRightY);
+      stream.next(m.normalizeLeftY);
     }
 
     ROS_DECLARE_ALLINONE_SERIALIZER
@@ -297,10 +326,18 @@ struct Printer< ::xbox_controller_driver::ControllerState_<ContainerAllocator> >
     Printer<int16_t>::stream(s, indent + "  ", v.start);
     s << indent << "guide: ";
     Printer<int16_t>::stream(s, indent + "  ", v.guide);
+    s << indent << "leftBumper: ";
+    Printer<int16_t>::stream(s, indent + "  ", v.leftBumper);
+    s << indent << "rightBumper: ";
+    Printer<int16_t>::stream(s, indent + "  ", v.rightBumper);
     s << indent << "leftTrigger: ";
     Printer<float>::stream(s, indent + "  ", v.leftTrigger);
     s << indent << "rightTrigger: ";
     Printer<float>::stream(s, indent + "  ", v.rightTrigger);
+    s << indent << "normalizeRightY: ";
+    Printer<float>::stream(s, indent + "  ", v.normalizeRightY);
+    s << indent << "normalizeLeftY: ";
+    Printer<float>::stream(s, indent + "  ", v.normalizeLeftY);
   }
 };
 

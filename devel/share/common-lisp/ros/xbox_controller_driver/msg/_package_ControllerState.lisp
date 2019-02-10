@@ -19,8 +19,16 @@
           START
           GUIDE-VAL
           GUIDE
+          LEFTBUMPER-VAL
+          LEFTBUMPER
+          RIGHTBUMPER-VAL
+          RIGHTBUMPER
           LEFTTRIGGER-VAL
           LEFTTRIGGER
           RIGHTTRIGGER-VAL
           RIGHTTRIGGER
+          NORMALIZERIGHTY-VAL
+          NORMALIZERIGHTY
+          NORMALIZELEFTY-VAL
+          NORMALIZELEFTY
 ))

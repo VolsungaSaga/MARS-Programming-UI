@@ -16,7 +16,7 @@
 
 (defclass xbox_controller_driver::ControllerState
   :super ros::object
-  :slots (_Header _leftY _rightY _A _B _X _Y _back _start _guide _leftTrigger _rightTrigger ))
+  :slots (_Header _leftY _rightY _A _B _X _Y _back _start _guide _leftBumper _rightBumper _leftTrigger _rightTrigger _normalizeRightY _normalizeLeftY ))
 
 (defmethod xbox_controller_driver::ControllerState
   (:init
@@ -31,8 +31,12 @@
     ((:back __back) 0)
     ((:start __start) 0)
     ((:guide __guide) 0)
+    ((:leftBumper __leftBumper) 0)
+    ((:rightBumper __rightBumper) 0)
     ((:leftTrigger __leftTrigger) 0.0)
     ((:rightTrigger __rightTrigger) 0.0)
+    ((:normalizeRightY __normalizeRightY) 0.0)
+    ((:normalizeLeftY __normalizeLeftY) 0.0)
     )
    (send-super :init)
    (setq _Header __Header)
@@ -45,8 +49,12 @@
    (setq _back (round __back))
    (setq _start (round __start))
    (setq _guide (round __guide))
+   (setq _leftBumper (round __leftBumper))
+   (setq _rightBumper (round __rightBumper))
    (setq _leftTrigger (float __leftTrigger))
    (setq _rightTrigger (float __rightTrigger))
+   (setq _normalizeRightY (float __normalizeRightY))
+   (setq _normalizeLeftY (float __normalizeLeftY))
    self)
   (:Header
    (&rest __Header)
@@ -82,12 +90,24 @@
   (:guide
    (&optional __guide)
    (if __guide (setq _guide __guide)) _guide)
+  (:leftBumper
+   (&optional __leftBumper)
+   (if __leftBumper (setq _leftBumper __leftBumper)) _leftBumper)
+  (:rightBumper
+   (&optional __rightBumper)
+   (if __rightBumper (setq _rightBumper __rightBumper)) _rightBumper)
   (:leftTrigger
    (&optional __leftTrigger)
    (if __leftTrigger (setq _leftTrigger __leftTrigger)) _leftTrigger)
   (:rightTrigger
    (&optional __rightTrigger)
    (if __rightTrigger (setq _rightTrigger __rightTrigger)) _rightTrigger)
+  (:normalizeRightY
+   (&optional __normalizeRightY)
+   (if __normalizeRightY (setq _normalizeRightY __normalizeRightY)) _normalizeRightY)
+  (:normalizeLeftY
+   (&optional __normalizeLeftY)
+   (if __normalizeLeftY (setq _normalizeLeftY __normalizeLeftY)) _normalizeLeftY)
   (:serialization-length
    ()
    (+
@@ -111,9 +131,17 @@
     2
     ;; int16 _guide
     2
+    ;; int16 _leftBumper
+    2
+    ;; int16 _rightBumper
+    2
     ;; float32 _leftTrigger
     4
     ;; float32 _rightTrigger
+    4
+    ;; float32 _normalizeRightY
+    4
+    ;; float32 _normalizeLeftY
     4
     ))
   (:serialize
@@ -140,10 +168,18 @@
        (write-word _start s)
      ;; int16 _guide
        (write-word _guide s)
+     ;; int16 _leftBumper
+       (write-word _leftBumper s)
+     ;; int16 _rightBumper
+       (write-word _rightBumper s)
      ;; float32 _leftTrigger
        (sys::poke _leftTrigger (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
      ;; float32 _rightTrigger
        (sys::poke _rightTrigger (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
+     ;; float32 _normalizeRightY
+       (sys::poke _normalizeRightY (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
+     ;; float32 _normalizeLeftY
+       (sys::poke _normalizeLeftY (send s :buffer) (send s :count) :float) (incf (stream-count s) 4)
      ;;
      (if (null strm) (get-output-stream-string s))))
   (:deserialize
@@ -168,15 +204,23 @@
      (setq _start (sys::peek buf ptr- :short)) (incf ptr- 2)
    ;; int16 _guide
      (setq _guide (sys::peek buf ptr- :short)) (incf ptr- 2)
+   ;; int16 _leftBumper
+     (setq _leftBumper (sys::peek buf ptr- :short)) (incf ptr- 2)
+   ;; int16 _rightBumper
+     (setq _rightBumper (sys::peek buf ptr- :short)) (incf ptr- 2)
    ;; float32 _leftTrigger
      (setq _leftTrigger (sys::peek buf ptr- :float)) (incf ptr- 4)
    ;; float32 _rightTrigger
      (setq _rightTrigger (sys::peek buf ptr- :float)) (incf ptr- 4)
+   ;; float32 _normalizeRightY
+     (setq _normalizeRightY (sys::peek buf ptr- :float)) (incf ptr- 4)
+   ;; float32 _normalizeLeftY
+     (setq _normalizeLeftY (sys::peek buf ptr- :float)) (incf ptr- 4)
    ;;
    self)
   )
 
-(setf (get xbox_controller_driver::ControllerState :md5sum-) "241623f4c570eac23d9ad3ea0b37b80a")
+(setf (get xbox_controller_driver::ControllerState :md5sum-) "4c31c26381776898087933af6bf1ba7e")
 (setf (get xbox_controller_driver::ControllerState :datatype-) "xbox_controller_driver/ControllerState")
 (setf (get xbox_controller_driver::ControllerState :definition-)
       "Header Header
@@ -191,10 +235,15 @@ int16 Y
 int16 back
 int16 start
 int16 guide
+int16 leftBumper
+int16 rightBumper
+
 
 float32 leftTrigger
 float32 rightTrigger
 
+float32 normalizeRightY
+float32 normalizeLeftY
 
 ================================================================================
 MSG: std_msgs/Header
@@ -218,6 +267,6 @@ string frame_id
 
 
 
-(provide :xbox_controller_driver/ControllerState "241623f4c570eac23d9ad3ea0b37b80a")
+(provide :xbox_controller_driver/ControllerState "4c31c26381776898087933af6bf1ba7e")
 
 
