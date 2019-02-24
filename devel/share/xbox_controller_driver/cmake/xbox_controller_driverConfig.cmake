@@ -67,14 +67,14 @@ set(xbox_controller_driver_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("TRUE" STREQUAL "TRUE")
-  set(xbox_controller_driver_SOURCE_PREFIX /home/david/git clones/MARS-Programming-UI/src/xbox_controller_driver)
-  set(xbox_controller_driver_DEVEL_PREFIX /home/david/git clones/MARS-Programming-UI/devel)
+  set(xbox_controller_driver_SOURCE_PREFIX /home/david/gitClones/MARS-Programming-UI/src/xbox_controller_driver)
+  set(xbox_controller_driver_DEVEL_PREFIX /home/david/gitClones/MARS-Programming-UI/devel)
   set(xbox_controller_driver_INSTALL_PREFIX "")
   set(xbox_controller_driver_PREFIX ${xbox_controller_driver_DEVEL_PREFIX})
 else()
   set(xbox_controller_driver_SOURCE_PREFIX "")
   set(xbox_controller_driver_DEVEL_PREFIX "")
-  set(xbox_controller_driver_INSTALL_PREFIX /home/david/git clones/MARS-Programming-UI/install)
+  set(xbox_controller_driver_INSTALL_PREFIX /home/david/gitClones/MARS-Programming-UI/install)
   set(xbox_controller_driver_PREFIX ${xbox_controller_driver_INSTALL_PREFIX})
 endif()
 
@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(xbox_controller_driver_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT "/home/david/git clones/MARS-Programming-UI/devel/include " STREQUAL " ")
+if(NOT "/home/david/gitClones/MARS-Programming-UI/devel/include;/home/david/gitClones/MARS-Programming-UI/src/xbox_controller_driver/include " STREQUAL " ")
   set(xbox_controller_driver_INCLUDE_DIRS "")
-  set(_include_dirs "/home/david/git clones/MARS-Programming-UI/devel/include")
+  set(_include_dirs "/home/david/gitClones/MARS-Programming-UI/devel/include;/home/david/gitClones/MARS-Programming-UI/src/xbox_controller_driver/include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -110,13 +110,13 @@ if(NOT "/home/david/git clones/MARS-Programming-UI/devel/include " STREQUAL " ")
         message(FATAL_ERROR "Project 'xbox_controller_driver' specifies '${idir}' as an include dir, which is not found.  It does not exist in '${include}'.  ${_report}")
       endif()
     else()
-      message(FATAL_ERROR "Project 'xbox_controller_driver' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/david/git clones/MARS-Programming-UI/src/xbox_controller_driver/${idir}'.  ${_report}")
+      message(FATAL_ERROR "Project 'xbox_controller_driver' specifies '${idir}' as an include dir, which is not found.  It does neither exist as an absolute directory nor in '/home/david/gitClones/MARS-Programming-UI/src/xbox_controller_driver/${idir}'.  ${_report}")
     endif()
     _list_append_unique(xbox_controller_driver_INCLUDE_DIRS ${include})
   endforeach()
 endif()
 
-set(libraries "")
+set(libraries "xbox_controller_driver")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")
@@ -129,7 +129,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/david/git clones/MARS-Programming-UI/devel/lib;/home/david/git clones/MARS-Programming-UI/devel/lib;/opt/ros/kinetic/lib)
+    foreach(path /home/david/gitClones/MARS-Programming-UI/devel/lib;/home/david/gitClones/MARS-Programming-UI/devel/lib;/opt/ros/kinetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)
@@ -160,7 +160,7 @@ foreach(t ${xbox_controller_driver_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "message_runtime")
+set(depends "geometry_msgs;roscpp;rospy;std_msgs;message_runtime")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls

@@ -43,35 +43,35 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/david/git clones/MARS-Programming-UI/src"
+CMAKE_SOURCE_DIR = /home/david/gitClones/MARS-Programming-UI/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/david/git clones/MARS-Programming-UI/build"
+CMAKE_BINARY_DIR = /home/david/gitClones/MARS-Programming-UI/build
 
 # Utility rule file for xbox_controller_driver_generate_messages_nodejs.
 
 # Include the progress variables for this target.
 include xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_nodejs.dir/progress.make
 
-xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_nodejs: /home/david/git\ clones/MARS-Programming-UI/devel/share/gennodejs/ros/xbox_controller_driver/msg/ControllerState.js
-xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_nodejs: /home/david/git\ clones/MARS-Programming-UI/devel/share/gennodejs/ros/xbox_controller_driver/msg/Tank.js
+xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_nodejs: /home/david/gitClones/MARS-Programming-UI/devel/share/gennodejs/ros/xbox_controller_driver/msg/ControllerState.js
+xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_nodejs: /home/david/gitClones/MARS-Programming-UI/devel/share/gennodejs/ros/xbox_controller_driver/msg/Tank.js
 
 
-/home/david/git\ clones/MARS-Programming-UI/devel/share/gennodejs/ros/xbox_controller_driver/msg/ControllerState.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
-/home/david/git\ clones/MARS-Programming-UI/devel/share/gennodejs/ros/xbox_controller_driver/msg/ControllerState.js: /home/david/git\ clones/MARS-Programming-UI/src/xbox_controller_driver/msg/ControllerState.msg
-/home/david/git\ clones/MARS-Programming-UI/devel/share/gennodejs/ros/xbox_controller_driver/msg/ControllerState.js: /opt/ros/kinetic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir="/home/david/git clones/MARS-Programming-UI/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from xbox_controller_driver/ControllerState.msg"
-	cd "/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver" && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/david/git\ clones/MARS-Programming-UI/src/xbox_controller_driver/msg/ControllerState.msg -Ixbox_controller_driver:/home/david/git\ clones/MARS-Programming-UI/src/xbox_controller_driver/msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p xbox_controller_driver -o /home/david/git\ clones/MARS-Programming-UI/devel/share/gennodejs/ros/xbox_controller_driver/msg
+/home/david/gitClones/MARS-Programming-UI/devel/share/gennodejs/ros/xbox_controller_driver/msg/ControllerState.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
+/home/david/gitClones/MARS-Programming-UI/devel/share/gennodejs/ros/xbox_controller_driver/msg/ControllerState.js: /home/david/gitClones/MARS-Programming-UI/src/xbox_controller_driver/msg/ControllerState.msg
+/home/david/gitClones/MARS-Programming-UI/devel/share/gennodejs/ros/xbox_controller_driver/msg/ControllerState.js: /opt/ros/kinetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/david/gitClones/MARS-Programming-UI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from xbox_controller_driver/ControllerState.msg"
+	cd /home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/david/gitClones/MARS-Programming-UI/src/xbox_controller_driver/msg/ControllerState.msg -Ixbox_controller_driver:/home/david/gitClones/MARS-Programming-UI/src/xbox_controller_driver/msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p xbox_controller_driver -o /home/david/gitClones/MARS-Programming-UI/devel/share/gennodejs/ros/xbox_controller_driver/msg
 
-/home/david/git\ clones/MARS-Programming-UI/devel/share/gennodejs/ros/xbox_controller_driver/msg/Tank.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
-/home/david/git\ clones/MARS-Programming-UI/devel/share/gennodejs/ros/xbox_controller_driver/msg/Tank.js: /home/david/git\ clones/MARS-Programming-UI/src/xbox_controller_driver/msg/Tank.msg
-/home/david/git\ clones/MARS-Programming-UI/devel/share/gennodejs/ros/xbox_controller_driver/msg/Tank.js: /opt/ros/kinetic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir="/home/david/git clones/MARS-Programming-UI/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from xbox_controller_driver/Tank.msg"
-	cd "/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver" && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/david/git\ clones/MARS-Programming-UI/src/xbox_controller_driver/msg/Tank.msg -Ixbox_controller_driver:/home/david/git\ clones/MARS-Programming-UI/src/xbox_controller_driver/msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p xbox_controller_driver -o /home/david/git\ clones/MARS-Programming-UI/devel/share/gennodejs/ros/xbox_controller_driver/msg
+/home/david/gitClones/MARS-Programming-UI/devel/share/gennodejs/ros/xbox_controller_driver/msg/Tank.js: /opt/ros/kinetic/lib/gennodejs/gen_nodejs.py
+/home/david/gitClones/MARS-Programming-UI/devel/share/gennodejs/ros/xbox_controller_driver/msg/Tank.js: /home/david/gitClones/MARS-Programming-UI/src/xbox_controller_driver/msg/Tank.msg
+/home/david/gitClones/MARS-Programming-UI/devel/share/gennodejs/ros/xbox_controller_driver/msg/Tank.js: /opt/ros/kinetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/david/gitClones/MARS-Programming-UI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating Javascript code from xbox_controller_driver/Tank.msg"
+	cd /home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /home/david/gitClones/MARS-Programming-UI/src/xbox_controller_driver/msg/Tank.msg -Ixbox_controller_driver:/home/david/gitClones/MARS-Programming-UI/src/xbox_controller_driver/msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p xbox_controller_driver -o /home/david/gitClones/MARS-Programming-UI/devel/share/gennodejs/ros/xbox_controller_driver/msg
 
 xbox_controller_driver_generate_messages_nodejs: xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_nodejs
-xbox_controller_driver_generate_messages_nodejs: /home/david/git\ clones/MARS-Programming-UI/devel/share/gennodejs/ros/xbox_controller_driver/msg/ControllerState.js
-xbox_controller_driver_generate_messages_nodejs: /home/david/git\ clones/MARS-Programming-UI/devel/share/gennodejs/ros/xbox_controller_driver/msg/Tank.js
+xbox_controller_driver_generate_messages_nodejs: /home/david/gitClones/MARS-Programming-UI/devel/share/gennodejs/ros/xbox_controller_driver/msg/ControllerState.js
+xbox_controller_driver_generate_messages_nodejs: /home/david/gitClones/MARS-Programming-UI/devel/share/gennodejs/ros/xbox_controller_driver/msg/Tank.js
 xbox_controller_driver_generate_messages_nodejs: xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_nodejs.dir/build.make
 
 .PHONY : xbox_controller_driver_generate_messages_nodejs
@@ -82,10 +82,10 @@ xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_nodej
 .PHONY : xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_nodejs.dir/build
 
 xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_nodejs.dir/clean:
-	cd "/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver" && $(CMAKE_COMMAND) -P CMakeFiles/xbox_controller_driver_generate_messages_nodejs.dir/cmake_clean.cmake
+	cd /home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver && $(CMAKE_COMMAND) -P CMakeFiles/xbox_controller_driver_generate_messages_nodejs.dir/cmake_clean.cmake
 .PHONY : xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_nodejs.dir/clean
 
 xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_nodejs.dir/depend:
-	cd "/home/david/git clones/MARS-Programming-UI/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/david/git clones/MARS-Programming-UI/src" "/home/david/git clones/MARS-Programming-UI/src/xbox_controller_driver" "/home/david/git clones/MARS-Programming-UI/build" "/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver" "/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_nodejs.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /home/david/gitClones/MARS-Programming-UI/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/david/gitClones/MARS-Programming-UI/src /home/david/gitClones/MARS-Programming-UI/src/xbox_controller_driver /home/david/gitClones/MARS-Programming-UI/build /home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver /home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_nodejs.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_nodejs.dir/depend
 

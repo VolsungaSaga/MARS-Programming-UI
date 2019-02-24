@@ -93,10 +93,6 @@ if __name__ == "__main__":
 
                 # rospy.loginfo(tank_msg)
                 # pub.publish(tank_msg)
-                tankList = []  # 0 index is left, 1 is right
-
-                tankList.append(controller.leftY())
-                tankList.append(controller.rightY())
                 controllerState = ControllerState()
                 controllerState.leftY = controller.leftY()
                 controllerState.rightY = controller.rightY()

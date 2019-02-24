@@ -43,41 +43,41 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/david/git clones/MARS-Programming-UI/src"
+CMAKE_SOURCE_DIR = /home/david/gitClones/MARS-Programming-UI/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/david/git clones/MARS-Programming-UI/build"
+CMAKE_BINARY_DIR = /home/david/gitClones/MARS-Programming-UI/build
 
 # Utility rule file for xbox_controller_driver_generate_messages_eus.
 
 # Include the progress variables for this target.
 include xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_eus.dir/progress.make
 
-xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_eus: /home/david/git\ clones/MARS-Programming-UI/devel/share/roseus/ros/xbox_controller_driver/msg/ControllerState.l
-xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_eus: /home/david/git\ clones/MARS-Programming-UI/devel/share/roseus/ros/xbox_controller_driver/msg/Tank.l
-xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_eus: /home/david/git\ clones/MARS-Programming-UI/devel/share/roseus/ros/xbox_controller_driver/manifest.l
+xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_eus: /home/david/gitClones/MARS-Programming-UI/devel/share/roseus/ros/xbox_controller_driver/msg/ControllerState.l
+xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_eus: /home/david/gitClones/MARS-Programming-UI/devel/share/roseus/ros/xbox_controller_driver/msg/Tank.l
+xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_eus: /home/david/gitClones/MARS-Programming-UI/devel/share/roseus/ros/xbox_controller_driver/manifest.l
 
 
-/home/david/git\ clones/MARS-Programming-UI/devel/share/roseus/ros/xbox_controller_driver/msg/ControllerState.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
-/home/david/git\ clones/MARS-Programming-UI/devel/share/roseus/ros/xbox_controller_driver/msg/ControllerState.l: /home/david/git\ clones/MARS-Programming-UI/src/xbox_controller_driver/msg/ControllerState.msg
-/home/david/git\ clones/MARS-Programming-UI/devel/share/roseus/ros/xbox_controller_driver/msg/ControllerState.l: /opt/ros/kinetic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir="/home/david/git clones/MARS-Programming-UI/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from xbox_controller_driver/ControllerState.msg"
-	cd "/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver" && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/david/git\ clones/MARS-Programming-UI/src/xbox_controller_driver/msg/ControllerState.msg -Ixbox_controller_driver:/home/david/git\ clones/MARS-Programming-UI/src/xbox_controller_driver/msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p xbox_controller_driver -o /home/david/git\ clones/MARS-Programming-UI/devel/share/roseus/ros/xbox_controller_driver/msg
+/home/david/gitClones/MARS-Programming-UI/devel/share/roseus/ros/xbox_controller_driver/msg/ControllerState.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
+/home/david/gitClones/MARS-Programming-UI/devel/share/roseus/ros/xbox_controller_driver/msg/ControllerState.l: /home/david/gitClones/MARS-Programming-UI/src/xbox_controller_driver/msg/ControllerState.msg
+/home/david/gitClones/MARS-Programming-UI/devel/share/roseus/ros/xbox_controller_driver/msg/ControllerState.l: /opt/ros/kinetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/david/gitClones/MARS-Programming-UI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating EusLisp code from xbox_controller_driver/ControllerState.msg"
+	cd /home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/david/gitClones/MARS-Programming-UI/src/xbox_controller_driver/msg/ControllerState.msg -Ixbox_controller_driver:/home/david/gitClones/MARS-Programming-UI/src/xbox_controller_driver/msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p xbox_controller_driver -o /home/david/gitClones/MARS-Programming-UI/devel/share/roseus/ros/xbox_controller_driver/msg
 
-/home/david/git\ clones/MARS-Programming-UI/devel/share/roseus/ros/xbox_controller_driver/msg/Tank.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
-/home/david/git\ clones/MARS-Programming-UI/devel/share/roseus/ros/xbox_controller_driver/msg/Tank.l: /home/david/git\ clones/MARS-Programming-UI/src/xbox_controller_driver/msg/Tank.msg
-/home/david/git\ clones/MARS-Programming-UI/devel/share/roseus/ros/xbox_controller_driver/msg/Tank.l: /opt/ros/kinetic/share/std_msgs/msg/Header.msg
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir="/home/david/git clones/MARS-Programming-UI/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from xbox_controller_driver/Tank.msg"
-	cd "/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver" && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/david/git\ clones/MARS-Programming-UI/src/xbox_controller_driver/msg/Tank.msg -Ixbox_controller_driver:/home/david/git\ clones/MARS-Programming-UI/src/xbox_controller_driver/msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p xbox_controller_driver -o /home/david/git\ clones/MARS-Programming-UI/devel/share/roseus/ros/xbox_controller_driver/msg
+/home/david/gitClones/MARS-Programming-UI/devel/share/roseus/ros/xbox_controller_driver/msg/Tank.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
+/home/david/gitClones/MARS-Programming-UI/devel/share/roseus/ros/xbox_controller_driver/msg/Tank.l: /home/david/gitClones/MARS-Programming-UI/src/xbox_controller_driver/msg/Tank.msg
+/home/david/gitClones/MARS-Programming-UI/devel/share/roseus/ros/xbox_controller_driver/msg/Tank.l: /opt/ros/kinetic/share/std_msgs/msg/Header.msg
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/david/gitClones/MARS-Programming-UI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating EusLisp code from xbox_controller_driver/Tank.msg"
+	cd /home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py /home/david/gitClones/MARS-Programming-UI/src/xbox_controller_driver/msg/Tank.msg -Ixbox_controller_driver:/home/david/gitClones/MARS-Programming-UI/src/xbox_controller_driver/msg -Igeometry_msgs:/opt/ros/kinetic/share/geometry_msgs/cmake/../msg -Istd_msgs:/opt/ros/kinetic/share/std_msgs/cmake/../msg -p xbox_controller_driver -o /home/david/gitClones/MARS-Programming-UI/devel/share/roseus/ros/xbox_controller_driver/msg
 
-/home/david/git\ clones/MARS-Programming-UI/devel/share/roseus/ros/xbox_controller_driver/manifest.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir="/home/david/git clones/MARS-Programming-UI/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp manifest code for xbox_controller_driver"
-	cd "/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver" && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/david/git\ clones/MARS-Programming-UI/devel/share/roseus/ros/xbox_controller_driver xbox_controller_driver geometry_msgs std_msgs
+/home/david/gitClones/MARS-Programming-UI/devel/share/roseus/ros/xbox_controller_driver/manifest.l: /opt/ros/kinetic/lib/geneus/gen_eus.py
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/david/gitClones/MARS-Programming-UI/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Generating EusLisp manifest code for xbox_controller_driver"
+	cd /home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/geneus/cmake/../../../lib/geneus/gen_eus.py -m -o /home/david/gitClones/MARS-Programming-UI/devel/share/roseus/ros/xbox_controller_driver xbox_controller_driver geometry_msgs std_msgs
 
 xbox_controller_driver_generate_messages_eus: xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_eus
-xbox_controller_driver_generate_messages_eus: /home/david/git\ clones/MARS-Programming-UI/devel/share/roseus/ros/xbox_controller_driver/msg/ControllerState.l
-xbox_controller_driver_generate_messages_eus: /home/david/git\ clones/MARS-Programming-UI/devel/share/roseus/ros/xbox_controller_driver/msg/Tank.l
-xbox_controller_driver_generate_messages_eus: /home/david/git\ clones/MARS-Programming-UI/devel/share/roseus/ros/xbox_controller_driver/manifest.l
+xbox_controller_driver_generate_messages_eus: /home/david/gitClones/MARS-Programming-UI/devel/share/roseus/ros/xbox_controller_driver/msg/ControllerState.l
+xbox_controller_driver_generate_messages_eus: /home/david/gitClones/MARS-Programming-UI/devel/share/roseus/ros/xbox_controller_driver/msg/Tank.l
+xbox_controller_driver_generate_messages_eus: /home/david/gitClones/MARS-Programming-UI/devel/share/roseus/ros/xbox_controller_driver/manifest.l
 xbox_controller_driver_generate_messages_eus: xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_eus.dir/build.make
 
 .PHONY : xbox_controller_driver_generate_messages_eus
@@ -88,10 +88,10 @@ xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_eus.d
 .PHONY : xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_eus.dir/build
 
 xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_eus.dir/clean:
-	cd "/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver" && $(CMAKE_COMMAND) -P CMakeFiles/xbox_controller_driver_generate_messages_eus.dir/cmake_clean.cmake
+	cd /home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver && $(CMAKE_COMMAND) -P CMakeFiles/xbox_controller_driver_generate_messages_eus.dir/cmake_clean.cmake
 .PHONY : xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_eus.dir/clean
 
 xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_eus.dir/depend:
-	cd "/home/david/git clones/MARS-Programming-UI/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/david/git clones/MARS-Programming-UI/src" "/home/david/git clones/MARS-Programming-UI/src/xbox_controller_driver" "/home/david/git clones/MARS-Programming-UI/build" "/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver" "/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_eus.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /home/david/gitClones/MARS-Programming-UI/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/david/gitClones/MARS-Programming-UI/src /home/david/gitClones/MARS-Programming-UI/src/xbox_controller_driver /home/david/gitClones/MARS-Programming-UI/build /home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver /home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_eus.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_eus.dir/depend
 

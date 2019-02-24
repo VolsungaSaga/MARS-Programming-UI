@@ -2,7 +2,7 @@ cmake_minimum_required(VERSION 2.8.3)
 project(xbox_controller_driver)
 
 ## Compile as C++11, supported in ROS Kinetic and newer
-# add_compile_options(-std=c++11)
+add_compile_options(-std=c++11)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -108,10 +108,10 @@ generate_messages(
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES xbox_controller_driver
-#  CATKIN_DEPENDS geometry_msgs roscpp rospy std_msgs
-#  DEPENDS system_lib
+  INCLUDE_DIRS include
+  LIBRARIES xbox_controller_driver
+  CATKIN_DEPENDS geometry_msgs roscpp rospy std_msgs
+ DEPENDS system_lib
    CATKIN_DEPENDS message_runtime
 )
 
@@ -122,14 +122,17 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-# include
+ include
   ${catkin_INCLUDE_DIRS}
+  ${PROJECT_SOURCE_DIR}/include
 )
 
 ## Declare a C++ library
 # add_library(${PROJECT_NAME}
 #   src/${PROJECT_NAME}/xbox_controller_driver.cpp
 # )
+#link_directories(${PROJECT_NAME}/include)
+#link_directories(${PROJECT_NAME/lib/x86-64})
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
@@ -139,8 +142,10 @@ include_directories(
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
-# add_executable(${PROJECT_NAME}_node src/xbox_controller_driver_node.cpp)
 
+add_executable(${PROJECT_NAME}_node cppListenerTest.cc)
+add_executable(${PROJECT_NAME}_onboardController onboardController.cpp)
+#add_executable(${PROJECT_NAME}_node cppListenerTest.cc)
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use
@@ -149,12 +154,25 @@ include_directories(
 
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-# add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
+add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+add_dependencies(${PROJECT_NAME}_onboardController ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+#include_directories(${PROJECT_NAME}/include)
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(${PROJECT_NAME}_node
-#   ${catkin_LIBRARIES}
-# )
+ target_link_libraries(${PROJECT_NAME}_node
+   ${catkin_LIBRARIES}
+
+ )
+#find_package (Threads REQUIRED)
+target_link_libraries(${PROJECT_NAME}_onboardController ${catkin_LIBRARIES})
+target_link_libraries(${PROJECT_NAME}_onboardController ${PROJECT_SOURCE_DIR}/lib/x86-64/libCTRE_Phoenix.a)
+target_link_libraries(${PROJECT_NAME}_onboardController ${PROJECT_SOURCE_DIR}/lib/x86-64/libCTRE_PhoenixCCI.a)
+target_link_libraries(${PROJECT_NAME}_onboardController ${PROJECT_SOURCE_DIR}/lib/x86-64/libCTRE_PhoenixPlatformLinuxSocketCan.a)
+target_link_libraries(${PROJECT_NAME}_onboardController ${PROJECT_SOURCE_DIR}/lib/x86-64/libCTRE_PhoenixCanutils.a)
+#target_link_libraries(${PROJECT_NAME}_onboardController Threads:Threads)
+# add_library(lib include/ctre/Phoenix.h)
+# target_link_libraries(${PROJECT_SOURCE_DIR}_onboardController lib
+  
 
 #############
 ## Install ##
@@ -203,3 +221,7 @@ include_directories(
 
 ## Add folders to be run by python nosetests
 # catkin_add_nosetests(test)
+
+#add_executable(cppListenerTest xbox_controller_driver/cppListenerTest.cpp)
+#target_link_libraries(cppListenerTest $(catkin_LIBRARIES))
+#add_dependencies(cppListenerTest xbox_controller_driver_generate_messages_cpp)

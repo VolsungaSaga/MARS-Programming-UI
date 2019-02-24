@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/david/git clones/MARS-Programming-UI/src"
+CMAKE_SOURCE_DIR = /home/david/gitClones/MARS-Programming-UI/src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/david/git clones/MARS-Programming-UI/build"
+CMAKE_BINARY_DIR = /home/david/gitClones/MARS-Programming-UI/build
 
 # Utility rule file for _xbox_controller_driver_generate_messages_check_deps_ControllerState.
 
@@ -54,7 +54,7 @@ CMAKE_BINARY_DIR = "/home/david/git clones/MARS-Programming-UI/build"
 include xbox_controller_driver/CMakeFiles/_xbox_controller_driver_generate_messages_check_deps_ControllerState.dir/progress.make
 
 xbox_controller_driver/CMakeFiles/_xbox_controller_driver_generate_messages_check_deps_ControllerState:
-	cd "/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver" && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py xbox_controller_driver /home/david/git\ clones/MARS-Programming-UI/src/xbox_controller_driver/msg/ControllerState.msg std_msgs/Header
+	cd /home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver && ../catkin_generated/env_cached.sh /usr/bin/python /opt/ros/kinetic/share/genmsg/cmake/../../../lib/genmsg/genmsg_check_deps.py xbox_controller_driver /home/david/gitClones/MARS-Programming-UI/src/xbox_controller_driver/msg/ControllerState.msg std_msgs/Header
 
 _xbox_controller_driver_generate_messages_check_deps_ControllerState: xbox_controller_driver/CMakeFiles/_xbox_controller_driver_generate_messages_check_deps_ControllerState
 _xbox_controller_driver_generate_messages_check_deps_ControllerState: xbox_controller_driver/CMakeFiles/_xbox_controller_driver_generate_messages_check_deps_ControllerState.dir/build.make
@@ -67,10 +67,10 @@ xbox_controller_driver/CMakeFiles/_xbox_controller_driver_generate_messages_chec
 .PHONY : xbox_controller_driver/CMakeFiles/_xbox_controller_driver_generate_messages_check_deps_ControllerState.dir/build
 
 xbox_controller_driver/CMakeFiles/_xbox_controller_driver_generate_messages_check_deps_ControllerState.dir/clean:
-	cd "/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver" && $(CMAKE_COMMAND) -P CMakeFiles/_xbox_controller_driver_generate_messages_check_deps_ControllerState.dir/cmake_clean.cmake
+	cd /home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver && $(CMAKE_COMMAND) -P CMakeFiles/_xbox_controller_driver_generate_messages_check_deps_ControllerState.dir/cmake_clean.cmake
 .PHONY : xbox_controller_driver/CMakeFiles/_xbox_controller_driver_generate_messages_check_deps_ControllerState.dir/clean
 
 xbox_controller_driver/CMakeFiles/_xbox_controller_driver_generate_messages_check_deps_ControllerState.dir/depend:
-	cd "/home/david/git clones/MARS-Programming-UI/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/david/git clones/MARS-Programming-UI/src" "/home/david/git clones/MARS-Programming-UI/src/xbox_controller_driver" "/home/david/git clones/MARS-Programming-UI/build" "/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver" "/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/_xbox_controller_driver_generate_messages_check_deps_ControllerState.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /home/david/gitClones/MARS-Programming-UI/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/david/gitClones/MARS-Programming-UI/src /home/david/gitClones/MARS-Programming-UI/src/xbox_controller_driver /home/david/gitClones/MARS-Programming-UI/build /home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver /home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/_xbox_controller_driver_generate_messages_check_deps_ControllerState.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : xbox_controller_driver/CMakeFiles/_xbox_controller_driver_generate_messages_check_deps_ControllerState.dir/depend
 

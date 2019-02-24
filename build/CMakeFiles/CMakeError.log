@@ -1,11 +1,11 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/david/git clones/MARS-Programming-UI/build/CMakeFiles/CMakeTmp
+Change Dir: /home/david/gitClones/MARS-Programming-UI/build/CMakeFiles/CMakeTmp
 
 Run Build Command:"/usr/bin/make" "cmTC_aed39/fast"
 /usr/bin/make -f CMakeFiles/cmTC_aed39.dir/build.make CMakeFiles/cmTC_aed39.dir/build
-make[1]: Entering directory '/home/david/git clones/MARS-Programming-UI/build/CMakeFiles/CMakeTmp'
+make[1]: Entering directory '/home/david/gitClones/MARS-Programming-UI/build/CMakeFiles/CMakeTmp'
 Building C object CMakeFiles/cmTC_aed39.dir/CheckSymbolExists.c.o
-/usr/bin/cc     -o CMakeFiles/cmTC_aed39.dir/CheckSymbolExists.c.o   -c "/home/david/git clones/MARS-Programming-UI/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c"
+/usr/bin/cc     -o CMakeFiles/cmTC_aed39.dir/CheckSymbolExists.c.o   -c "/home/david/gitClones/MARS-Programming-UI/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c"
 Linking C executable cmTC_aed39
 /usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_aed39.dir/link.txt --verbose=1
 /usr/bin/cc       CMakeFiles/cmTC_aed39.dir/CheckSymbolExists.c.o  -o cmTC_aed39 -rdynamic 
@@ -14,11 +14,11 @@ CheckSymbolExists.c:(.text+0x16): undefined reference to `pthread_create'
 collect2: error: ld returned 1 exit status
 CMakeFiles/cmTC_aed39.dir/build.make:97: recipe for target 'cmTC_aed39' failed
 make[1]: *** [cmTC_aed39] Error 1
-make[1]: Leaving directory '/home/david/git clones/MARS-Programming-UI/build/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/david/gitClones/MARS-Programming-UI/build/CMakeFiles/CMakeTmp'
 Makefile:126: recipe for target 'cmTC_aed39/fast' failed
 make: *** [cmTC_aed39/fast] Error 2
 
-File /home/david/git clones/MARS-Programming-UI/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/david/gitClones/MARS-Programming-UI/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -34,11 +34,11 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/david/git clones/MARS-Programming-UI/build/CMakeFiles/CMakeTmp
+Change Dir: /home/david/gitClones/MARS-Programming-UI/build/CMakeFiles/CMakeTmp
 
 Run Build Command:"/usr/bin/make" "cmTC_d8ec2/fast"
 /usr/bin/make -f CMakeFiles/cmTC_d8ec2.dir/build.make CMakeFiles/cmTC_d8ec2.dir/build
-make[1]: Entering directory '/home/david/git clones/MARS-Programming-UI/build/CMakeFiles/CMakeTmp'
+make[1]: Entering directory '/home/david/gitClones/MARS-Programming-UI/build/CMakeFiles/CMakeTmp'
 Building C object CMakeFiles/cmTC_d8ec2.dir/CheckFunctionExists.c.o
 /usr/bin/cc    -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_d8ec2.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.5/Modules/CheckFunctionExists.c
 Linking C executable cmTC_d8ec2
@@ -48,7 +48,7 @@ Linking C executable cmTC_d8ec2
 collect2: error: ld returned 1 exit status
 CMakeFiles/cmTC_d8ec2.dir/build.make:97: recipe for target 'cmTC_d8ec2' failed
 make[1]: *** [cmTC_d8ec2] Error 1
-make[1]: Leaving directory '/home/david/git clones/MARS-Programming-UI/build/CMakeFiles/CMakeTmp'
+make[1]: Leaving directory '/home/david/gitClones/MARS-Programming-UI/build/CMakeFiles/CMakeTmp'
 Makefile:126: recipe for target 'cmTC_d8ec2/fast' failed
 make: *** [cmTC_d8ec2/fast] Error 2
 

@@ -1,8 +1,8 @@
-# Install script for directory: /home/david/git clones/MARS-Programming-UI/src/xbox_controller_driver
+# Install script for directory: /home/david/gitClones/MARS-Programming-UI/src/xbox_controller_driver
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/david/git clones/MARS-Programming-UI/install")
+  set(CMAKE_INSTALL_PREFIX "/home/david/gitClones/MARS-Programming-UI/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -34,55 +34,55 @@ endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/xbox_controller_driver/msg" TYPE FILE FILES
-    "/home/david/git clones/MARS-Programming-UI/src/xbox_controller_driver/msg/Tank.msg"
-    "/home/david/git clones/MARS-Programming-UI/src/xbox_controller_driver/msg/ControllerState.msg"
+    "/home/david/gitClones/MARS-Programming-UI/src/xbox_controller_driver/msg/Tank.msg"
+    "/home/david/gitClones/MARS-Programming-UI/src/xbox_controller_driver/msg/ControllerState.msg"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/xbox_controller_driver/cmake" TYPE FILE FILES "/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/catkin_generated/installspace/xbox_controller_driver-msg-paths.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/xbox_controller_driver/cmake" TYPE FILE FILES "/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/catkin_generated/installspace/xbox_controller_driver-msg-paths.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/david/git clones/MARS-Programming-UI/devel/include/xbox_controller_driver")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/david/gitClones/MARS-Programming-UI/devel/include/xbox_controller_driver")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/david/git clones/MARS-Programming-UI/devel/share/roseus/ros/xbox_controller_driver")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/david/gitClones/MARS-Programming-UI/devel/share/roseus/ros/xbox_controller_driver")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/david/git clones/MARS-Programming-UI/devel/share/common-lisp/ros/xbox_controller_driver")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/david/gitClones/MARS-Programming-UI/devel/share/common-lisp/ros/xbox_controller_driver")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/david/git clones/MARS-Programming-UI/devel/share/gennodejs/ros/xbox_controller_driver")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/david/gitClones/MARS-Programming-UI/devel/share/gennodejs/ros/xbox_controller_driver")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  execute_process(COMMAND "/usr/bin/python" -m compileall "/home/david/git clones/MARS-Programming-UI/devel/lib/python2.7/dist-packages/xbox_controller_driver")
+  execute_process(COMMAND "/usr/bin/python" -m compileall "/home/david/gitClones/MARS-Programming-UI/devel/lib/python2.7/dist-packages/xbox_controller_driver")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/david/git clones/MARS-Programming-UI/devel/lib/python2.7/dist-packages/xbox_controller_driver")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python2.7/dist-packages" TYPE DIRECTORY FILES "/home/david/gitClones/MARS-Programming-UI/devel/lib/python2.7/dist-packages/xbox_controller_driver")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/catkin_generated/installspace/xbox_controller_driver.pc")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/catkin_generated/installspace/xbox_controller_driver.pc")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/xbox_controller_driver/cmake" TYPE FILE FILES "/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/catkin_generated/installspace/xbox_controller_driver-msg-extras.cmake")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/xbox_controller_driver/cmake" TYPE FILE FILES "/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/catkin_generated/installspace/xbox_controller_driver-msg-extras.cmake")
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/xbox_controller_driver/cmake" TYPE FILE FILES
-    "/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/catkin_generated/installspace/xbox_controller_driverConfig.cmake"
-    "/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/catkin_generated/installspace/xbox_controller_driverConfig-version.cmake"
+    "/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/catkin_generated/installspace/xbox_controller_driverConfig.cmake"
+    "/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/catkin_generated/installspace/xbox_controller_driverConfig-version.cmake"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_COMPONENT OR "${CMAKE_INSTALL_COMPONENT}" STREQUAL "Unspecified")
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/xbox_controller_driver" TYPE FILE FILES "/home/david/git clones/MARS-Programming-UI/src/xbox_controller_driver/package.xml")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/xbox_controller_driver" TYPE FILE FILES "/home/david/gitClones/MARS-Programming-UI/src/xbox_controller_driver/package.xml")
 endif()
 

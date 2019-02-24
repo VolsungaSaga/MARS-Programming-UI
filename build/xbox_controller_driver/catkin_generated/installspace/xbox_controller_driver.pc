@@ -1,8 +1,8 @@
-prefix=/home/david/git clones/MARS-Programming-UI/install
+prefix=/home/david/gitClones/MARS-Programming-UI/install
 
 Name: xbox_controller_driver
 Description: Description of xbox_controller_driver
 Version: 0.0.0
-Cflags: -I/home/david/git clones/MARS-Programming-UI/install/include
-Libs: -L/home/david/git clones/MARS-Programming-UI/install/lib 
-Requires: message_runtime
+Cflags: -I/home/david/gitClones/MARS-Programming-UI/install/include
+Libs: -L/home/david/gitClones/MARS-Programming-UI/install/lib -lxbox_controller_driver
+Requires: geometry_msgs roscpp rospy std_msgs message_runtime

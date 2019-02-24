@@ -1,70 +1,72 @@
-/home/david/git clones/MARS-Programming-UI/build/CMakeFiles/install.dir
-/home/david/git clones/MARS-Programming-UI/build/CMakeFiles/clean_test_results.dir
-/home/david/git clones/MARS-Programming-UI/build/CMakeFiles/run_tests.dir
-/home/david/git clones/MARS-Programming-UI/build/CMakeFiles/download_extra_data.dir
-/home/david/git clones/MARS-Programming-UI/build/CMakeFiles/tests.dir
-/home/david/git clones/MARS-Programming-UI/build/CMakeFiles/edit_cache.dir
-/home/david/git clones/MARS-Programming-UI/build/CMakeFiles/doxygen.dir
-/home/david/git clones/MARS-Programming-UI/build/CMakeFiles/rebuild_cache.dir
-/home/david/git clones/MARS-Programming-UI/build/CMakeFiles/list_install_components.dir
-/home/david/git clones/MARS-Programming-UI/build/CMakeFiles/install/strip.dir
-/home/david/git clones/MARS-Programming-UI/build/CMakeFiles/install/local.dir
-/home/david/git clones/MARS-Programming-UI/build/CMakeFiles/test.dir
-/home/david/git clones/MARS-Programming-UI/build/gtest/CMakeFiles/list_install_components.dir
-/home/david/git clones/MARS-Programming-UI/build/gtest/CMakeFiles/install.dir
-/home/david/git clones/MARS-Programming-UI/build/gtest/CMakeFiles/rebuild_cache.dir
-/home/david/git clones/MARS-Programming-UI/build/gtest/CMakeFiles/test.dir
-/home/david/git clones/MARS-Programming-UI/build/gtest/CMakeFiles/edit_cache.dir
-/home/david/git clones/MARS-Programming-UI/build/gtest/CMakeFiles/gmock.dir
-/home/david/git clones/MARS-Programming-UI/build/gtest/CMakeFiles/gmock_main.dir
-/home/david/git clones/MARS-Programming-UI/build/gtest/CMakeFiles/install/strip.dir
-/home/david/git clones/MARS-Programming-UI/build/gtest/CMakeFiles/install/local.dir
-/home/david/git clones/MARS-Programming-UI/build/gtest/gtest/CMakeFiles/list_install_components.dir
-/home/david/git clones/MARS-Programming-UI/build/gtest/gtest/CMakeFiles/install.dir
-/home/david/git clones/MARS-Programming-UI/build/gtest/gtest/CMakeFiles/edit_cache.dir
-/home/david/git clones/MARS-Programming-UI/build/gtest/gtest/CMakeFiles/test.dir
-/home/david/git clones/MARS-Programming-UI/build/gtest/gtest/CMakeFiles/rebuild_cache.dir
-/home/david/git clones/MARS-Programming-UI/build/gtest/gtest/CMakeFiles/gtest.dir
-/home/david/git clones/MARS-Programming-UI/build/gtest/gtest/CMakeFiles/gtest_main.dir
-/home/david/git clones/MARS-Programming-UI/build/gtest/gtest/CMakeFiles/install/strip.dir
-/home/david/git clones/MARS-Programming-UI/build/gtest/gtest/CMakeFiles/install/local.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/install.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/rebuild_cache.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/edit_cache.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/install/local.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/install/strip.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/xbox_controller_driver_genpy.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_nodejs.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/list_install_components.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/xbox_controller_driver_genlisp.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_lisp.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/xbox_controller_driver_geneus.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_cpp.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/xbox_controller_driver_gennodejs.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/_xbox_controller_driver_generate_messages_check_deps_Tank.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/geometry_msgs_generate_messages_py.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/geometry_msgs_generate_messages_cpp.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_eus.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/roscpp_generate_messages_cpp.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/geometry_msgs_generate_messages_eus.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/std_msgs_generate_messages_py.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/std_msgs_generate_messages_lisp.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/geometry_msgs_generate_messages_lisp.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/xbox_controller_driver_gencpp.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/std_msgs_generate_messages_nodejs.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/std_msgs_generate_messages_eus.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/roscpp_generate_messages_lisp.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/roscpp_generate_messages_eus.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/roscpp_generate_messages_py.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_py.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/std_msgs_generate_messages_cpp.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/rosgraph_msgs_generate_messages_py.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/roscpp_generate_messages_nodejs.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/test.dir
-/home/david/git clones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/_xbox_controller_driver_generate_messages_check_deps_ControllerState.dir
+/home/david/gitClones/MARS-Programming-UI/build/CMakeFiles/install.dir
+/home/david/gitClones/MARS-Programming-UI/build/CMakeFiles/clean_test_results.dir
+/home/david/gitClones/MARS-Programming-UI/build/CMakeFiles/run_tests.dir
+/home/david/gitClones/MARS-Programming-UI/build/CMakeFiles/download_extra_data.dir
+/home/david/gitClones/MARS-Programming-UI/build/CMakeFiles/tests.dir
+/home/david/gitClones/MARS-Programming-UI/build/CMakeFiles/edit_cache.dir
+/home/david/gitClones/MARS-Programming-UI/build/CMakeFiles/doxygen.dir
+/home/david/gitClones/MARS-Programming-UI/build/CMakeFiles/rebuild_cache.dir
+/home/david/gitClones/MARS-Programming-UI/build/CMakeFiles/list_install_components.dir
+/home/david/gitClones/MARS-Programming-UI/build/CMakeFiles/install/strip.dir
+/home/david/gitClones/MARS-Programming-UI/build/CMakeFiles/install/local.dir
+/home/david/gitClones/MARS-Programming-UI/build/CMakeFiles/test.dir
+/home/david/gitClones/MARS-Programming-UI/build/gtest/CMakeFiles/list_install_components.dir
+/home/david/gitClones/MARS-Programming-UI/build/gtest/CMakeFiles/install.dir
+/home/david/gitClones/MARS-Programming-UI/build/gtest/CMakeFiles/rebuild_cache.dir
+/home/david/gitClones/MARS-Programming-UI/build/gtest/CMakeFiles/test.dir
+/home/david/gitClones/MARS-Programming-UI/build/gtest/CMakeFiles/edit_cache.dir
+/home/david/gitClones/MARS-Programming-UI/build/gtest/CMakeFiles/gmock.dir
+/home/david/gitClones/MARS-Programming-UI/build/gtest/CMakeFiles/gmock_main.dir
+/home/david/gitClones/MARS-Programming-UI/build/gtest/CMakeFiles/install/strip.dir
+/home/david/gitClones/MARS-Programming-UI/build/gtest/CMakeFiles/install/local.dir
+/home/david/gitClones/MARS-Programming-UI/build/gtest/gtest/CMakeFiles/list_install_components.dir
+/home/david/gitClones/MARS-Programming-UI/build/gtest/gtest/CMakeFiles/install.dir
+/home/david/gitClones/MARS-Programming-UI/build/gtest/gtest/CMakeFiles/edit_cache.dir
+/home/david/gitClones/MARS-Programming-UI/build/gtest/gtest/CMakeFiles/test.dir
+/home/david/gitClones/MARS-Programming-UI/build/gtest/gtest/CMakeFiles/rebuild_cache.dir
+/home/david/gitClones/MARS-Programming-UI/build/gtest/gtest/CMakeFiles/gtest.dir
+/home/david/gitClones/MARS-Programming-UI/build/gtest/gtest/CMakeFiles/gtest_main.dir
+/home/david/gitClones/MARS-Programming-UI/build/gtest/gtest/CMakeFiles/install/strip.dir
+/home/david/gitClones/MARS-Programming-UI/build/gtest/gtest/CMakeFiles/install/local.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/install.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/rebuild_cache.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/edit_cache.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/install/local.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/install/strip.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/xbox_controller_driver_onboardController.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/xbox_controller_driver_genpy.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_nodejs.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/list_install_components.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/xbox_controller_driver_genlisp.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_lisp.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/xbox_controller_driver_geneus.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_cpp.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/xbox_controller_driver_gennodejs.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/_xbox_controller_driver_generate_messages_check_deps_Tank.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/geometry_msgs_generate_messages_py.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/xbox_controller_driver_node.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/geometry_msgs_generate_messages_cpp.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_eus.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/roscpp_generate_messages_cpp.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/geometry_msgs_generate_messages_eus.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/std_msgs_generate_messages_py.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/std_msgs_generate_messages_lisp.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/geometry_msgs_generate_messages_lisp.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/xbox_controller_driver_gencpp.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/std_msgs_generate_messages_nodejs.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/std_msgs_generate_messages_eus.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/roscpp_generate_messages_lisp.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/roscpp_generate_messages_eus.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/roscpp_generate_messages_py.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages_py.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/std_msgs_generate_messages_cpp.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/rosgraph_msgs_generate_messages_py.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/roscpp_generate_messages_nodejs.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/xbox_controller_driver_generate_messages.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/test.dir
+/home/david/gitClones/MARS-Programming-UI/build/xbox_controller_driver/CMakeFiles/_xbox_controller_driver_generate_messages_check_deps_ControllerState.dir

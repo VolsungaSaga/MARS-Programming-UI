@@ -1,18 +1,18 @@
 #usr/bin/env python
 
 import rospy
-from xbox_controller_driver.msg import Tank
+from xbox_controller_driver.msg import ControllerState
 
 
 def callback(data):
     rospy.loginfo(rospy.get_caller_id())
-    print(data.powerLevel)
-    print(data.angle)
+    print(data.normalizeRightY)
+    print(data.normalizeLeftY)
 def listener():
 
     rospy.init_node('listener', anonymous=True)
 
-    rospy.Subscriber("controller",Tank, callback)
+    rospy.Subscriber("controller",ControllerState, callback)
     
     rospy.spin()
 
