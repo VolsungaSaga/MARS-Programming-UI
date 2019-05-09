@@ -6,15 +6,15 @@ The repository for the UI team. This will consist of the code for the Xbox contr
     - `ROS_IP=`your computer's ip (found using "hostname -I")
     - Defaults env_keep+="PYTHONPATH" (add this to your sudoers file)
     
-        **IMPORTANT**: DO NOT use a regular text editor to edit the sudoers file. You might make a syntax error and won't be able to use ANY sudo command! That is a bad thing.
-        In order to change up your sudoers file properly, run this: 
-         -`$ pkexec visudo.`
+        **IMPORTANT**: DO NOT use a regular text editor to edit the sudoers file. You might make a syntax error and won't be able to use ANY sudo command! That is a bad thing. In order to change up your sudoers file properly, run this: 
+         -`$ pkexec visudo`
+         
         This performs sanity checks before it commits your changes to the sudoers file.
 2. Install the following driver for the gamepad by running the command:
-    - `sudo apt-get install xboxdrv`
+    - `$ sudo apt-get install xboxdrv`
 3. Download and build the xbox_controller_driver package using catkin_make.
-4. login to the root account using `su root`.  Just using sudo will not work
-    4a. If you're getting authentication failures with this command, try doing `sudo su root`.
+4. login to the root account using `$ su root`.  Just using sudo will not work
+    4a. If you're getting authentication failures with this command, try doing `$ sudo su root`.
 5. source the setup.bash file in /devel folder of the xbox_controller_driver package
 6. plug in the gamepad
 7. execute "inputloop.py"
