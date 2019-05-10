@@ -14,7 +14,7 @@ The repository for the UI team. This will consist of the code for the Xbox contr
     - `$ sudo apt-get install xboxdrv`
 3. Download and build the xbox_controller_driver package using catkin_make.
 4. login to the root account using `$ su root`.  Just using sudo will not work
-    4a. If you're getting authentication failures with this command, try doing `$ sudo su root`.
+    4a. If you're getting authentication failures with this command, try doing `$ sudo -E su -p`. This command preserves environment variables, allowing you to use ROS packages while acting as root.
 5. source the setup.bash file in /devel folder of the xbox_controller_driver package
 6. plug in the gamepad
 7. execute "inputloop.py"
